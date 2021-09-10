@@ -1,12 +1,15 @@
 * {
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
   
   body{
     font-family: sans-serif;
     margin: 0;
     background-color: rgb(182, 226, 231);
-  
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,9 +20,6 @@
     min-width: 90%;
     margin: 30px;
     padding: 30px;
-    /* display: flex; */
-    /* flex-direction: column; */
-  
     background-color: rgb(156, 225, 231);
     border-radius: 6px;
     box-shadow: 0px 0px 20px rgb(87, 151, 189);
@@ -35,6 +35,12 @@
   h1 em {
     font-style: unset;
     font-size: 44px;
+  }
+
+  h2{
+    color: whitesmoke;
+    font-size: 24px;
+    border-radius: 2rem;
   }
   
   table{
@@ -52,19 +58,67 @@
     height: fit-content;
     height: 32px;
     background-color: transparent;
-  
     border: 1px solid rgb(190, 215, 238);
     border-radius: 6px;
     font-weight: bold;
     font-size: 14px;
   
     cursor: pointer;
+    border: black;
   }
   
   button:hover{
     box-shadow: 0px 2px 10px rgb(147, 180, 241);
   }
   
+  #add_new {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #add_new:hover {
+    transform: scale(1.1);
+    background-color: #424242;
+  }
+  
+  #add_new p {
+    font-size: 32px;
+    color: white;
+  }
+
+  .edit{
+    height: fit-content;
+    height: 32px;
+    width: 50px;
+
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+ 
+.excluir{
+    height: fit-content;
+    height: 32px;
+    width: 50px;
+
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
   .input-group{
     display: flex;
     flex-direction: column;
@@ -101,7 +155,7 @@
     background-color: #0009;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
   }
@@ -126,8 +180,27 @@ table th{
     background-color: rgb(125, 176, 235);
 }
 
+.container-modal{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
 
+  background-color: #02020299;
 
+}
+
+.container-modal form{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(153, 201, 247);
+
+  padding: 20px;
+}
 
 /* *{
     margin: 0;
@@ -176,17 +249,7 @@ input {
  }
 
 
-.container-form-funcionarios{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    align-items: center;
-    justify-content: center;
 
-    background-color: #FFFFFF99;
-
-}
 
 .container-form-funcionarios form{
     padding: 20px;
